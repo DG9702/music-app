@@ -1,0 +1,187 @@
+.wrapper {
+    padding: 8px 32px;
+    padding-bottom: 40px;
+
+    .info {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+
+        .info-styledTopLinks {
+            display: flex;
+            flex-direction: row;
+
+            .styledTopLinks-group {
+                margin-right: 24px;
+                margin-bottom: 32px;
+                width: 200px;
+
+                .styledTopLinks-head {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: var(--white);
+                    margin-bottom: 8px;
+                }
+    
+                .styledTopLinks-container {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    overflow-wrap: break-word;
+
+                    .styledTopLinks-container-link {
+                        font-size: 17px;
+                        margin: 8px 0px;
+                        width: fit-content;
+                        cursor: pointer;
+                        font-weight: 500;
+
+                        &:hover {
+                            text-decoration: underline;
+                            .styledTopLinks-container-title {
+                                color: var(--white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-socialLinks {
+            margin-bottom: 40px;
+            margin-right: 5px;
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+
+            .about-socialLinks-item {
+                .socialLinks-item-btn {
+                    height: 40px;
+                    width: 40px;
+                    margin: 0;
+                    padding: 0;
+                    
+                    span {
+                        display: flex;
+                        align-items: center;
+                        color: var(--white);
+
+                    }
+
+                    &:hover {
+                        background-color: rgb(114, 114, 114);
+                    }
+                }
+            }
+        }
+    }
+
+    .horizontalRule {
+        border-color: rgba(255, 255, 255, 0.1);
+        margin: 0px;
+        margin-bottom: 24px;
+    }   
+
+    .copyright {
+        padding-top: 16px;
+        flex-flow: row nowrap;
+        display: flex;
+        justify-content: space-between;
+
+        .copyright-link {
+            display: flex;
+            flex-flow: row wrap;
+            .copyright-link-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+
+                @media (max-width: 432px) {
+                    gap: 0;
+
+                    .copyright-link-item {
+                        margin-bottom: 0;
+                        margin-right: 8px;
+                    }
+                }
+                .copyright-link-item {
+                    margin-bottom: 8px;
+                    cursor: pointer;
+
+
+                    span {
+                        margin: 0;
+
+                        &:hover {
+                            color: var(--white);
+                        }
+
+                        &.active {
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+        .copyright-title {
+            flex: 0 0 auto;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+            padding-right: 20px;
+        }
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--text-subdued,#6a6a6a)
+    }   
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        padding: 8px 16px;
+        text-align: start;
+        
+
+        .info {
+            flex-direction: column;
+
+            .info-styledTopLinks {
+                flex-flow: column wrap;
+                flex-direction: row;
+
+                .styledTopLinks-group {
+                    width: 40%!important;
+                    line-height: 15px;
+
+                    .styledTopLinks-head {
+                        font-size: 17px;
+                    }
+
+                    .styledTopLinks-container-link {
+                        font-size: 15px !important;
+                    }
+                }
+            }            
+
+            .about-socialLinks {
+                margin-top: 3px;
+            }
+        }
+    }
+
+    .copyright {
+        flex-flow: column wrap !important;
+    }            
+
+    
+}
+
+@media (max-width: 450px) {
+    .info-styledTopLinks {
+        flex-flow: column wrap;
+        flex-direction: column;
+    }
+}

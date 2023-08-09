@@ -1,0 +1,27 @@
+.wrapper {
+    height: 100%;
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    z-index: 0;
+
+    .toast_msg {
+        z-index: 999999;
+    
+        @media (max-width: 480px) {
+            max-width: 80vw;  
+            margin: 16px;
+        }
+    
+    }
+
+    //.control-music {
+    //    background-color: var(--black);
+    //    bottom: 0;
+    //    height: 72px;
+    //    position: sticky;
+    //    width: 100%;
+    //    z-index: 9;
+    //}
+    
+}

@@ -1,0 +1,40 @@
+.wrapper {
+    z-index: 999999;
+    height: 100%;
+    background-color: black;
+    
+    
+    .container {
+        flex-grow: 1;
+        overflow-y: scroll;
+        padding: 56px 40px;
+
+        button, a {
+            padding: 8px 0 !important;
+            text-transform: none !important;
+            font-size: 22px !important;
+            font-weight: 600;
+            color: var(--white);
+
+            .right_icon {
+                margin-left: 8px !important;
+            }
+        }
+
+        .brick {
+
+            .brick-content {
+                border: 1px solid #fff;
+                margin: 32px 0;
+                width: 16px;
+            }
+        }
+        .content-down {
+            button {
+                padding: 6px 0 !important;
+                font-size: 16px !important;
+
+            }
+        }
+    }
+}

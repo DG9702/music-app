@@ -1,0 +1,198 @@
+.wrapper {
+    margin-top: -64px;
+    display: block;
+    .artists_container_header {
+        margin: 0;
+        min-height: 100%;
+        height: 430px;
+        position: relative;
+        max-height: none;
+        display: flex;
+        overflow: hidden;
+        z-index: 99;
+
+        @media (max-width: 600px) {
+            //mobile
+            height: auto;
+            margin-bottom: 30px;
+        }
+        .header_box {
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            opacity: 0.95;
+            position: relative;
+            object-fit: cover;
+            background-position: 75% 25%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+        .box_singer {
+            height: 100%;
+            padding-bottom: 24px;
+            display: flex;
+            flex: 1;
+            flex-flow: column;
+            justify-content: flex-end;
+            color: var(--white);
+
+            .title-topic {
+                display: inline-grid;
+                align-items: center;
+                gap: 8px;
+                grid-template-columns: auto 1fr;
+
+                div {
+                    background-color: var(--white);
+                    border-radius: 50%;
+                    height: 60%;
+                    justify-self: center;
+                    width: 60%;
+                    grid-area: 1/1/2/2;
+                }
+
+                svg {
+                    fill: #3d91f4;
+                    grid-area: 1/1/2/2;
+                }
+
+                span {
+                    color: var(--white);
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+            }
+
+            @media (max-width: 600px) {
+                //mobile
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+        .image_singer {
+            width: 140px;
+            height: 140px;
+            border-radius: 100px;
+            margin-right: 40px;
+
+            @media (max-width: 600px) {
+                //mobile
+                width: 80px;
+                height: 80px;
+                margin-right: 20px;
+            }
+        }
+        .singer_info {
+            width: 100%;
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: unset;
+            word-break: break-word;
+
+            h1 {
+                margin: 4px 0 8px;
+                font-size: 66px;
+                font-weight: 900;
+            }
+        }
+        .singer_name {
+            font-size: 28px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .extra_title {
+            font-size: 17px;
+            line-height: 2;
+            margin-top: 4px;
+            font-weight: 500;
+            @media (max-width: 600px) {
+                //mobile
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1199px) {
+    .wrapper {
+        .artists_container_header {
+            padding: 72px 16px 16px;
+            margin: 0;
+            .box_singer {
+                padding: 0;
+                
+                .img_banner {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    transform: translateZ(0);
+                    border-radius: 50%;
+                    width: clamp(144px,40vw,288px);
+                    margin: 8px 0;
+                    filter: drop-shadow(0 0 18.3529px rgba(0,0,0,.3));
+                }
+                .title-topic {
+                    align-self: flex-start;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+                .singer_info {
+                    text-align: start;
+                    
+                    h1 {
+                        font-size: 25px;
+                        margin: 0;
+                    }
+                }
+                .extra_title {
+                    display: flex;
+                    align-self: flex-start;
+                    color: hsla(0,0%,100%,.7);
+                    font-size: 13px;
+                }
+            }
+        }
+    }            
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        .artists_container_header {
+
+        }
+        
+    }
+}
+
+.list_song::-webkit-scrollbar {
+    width: 6px;
+    display: none;
+}
+.list_song::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+}
+.list_song::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset #fff;
+    border-radius: 4px;
+}

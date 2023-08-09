@@ -1,0 +1,165 @@
+.container_body {
+        background-color: #121212;
+        isolation: isolate;
+        position: relative;
+
+        .btn-effect {
+            position: relative;
+            overflow: visible;
+            height: 104px;
+            z-index: 1;
+
+            .btn-effect-container {
+                box-sizing: inherit;
+                direction: inherit;
+                left: 0;
+                margin: 0;
+                outline: none;
+                padding: 0;
+                position: relative;
+                resize: none;
+                right: 0;
+                top: 0;
+                display: flex;
+                visibility: visible;
+    
+                .btn-effect_padding {
+                    padding: 24px;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: row;
+    
+                    button {
+                        margin-right: 32px;
+                        border-radius: 500px;
+                        //background-color: #1ed760;
+                        position: relative;
+                        text-align: center;
+                        color: var(--text-subdued,#6a6a6a) ;
+                        width: 32px;
+                        //color: var(--black);
+                        padding: 0;
+    
+                        svg {
+                            position: absolute;
+                            top: 18px;
+                            left: 18px;
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                }
+            }
+            .scroll-horizon {
+                position: absolute;
+                left: 0;
+                right: 0;
+                padding: 2px;
+                height: 16px;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity .3s,visibility .3s,top .3s,right .3s,bottom .3s,left .3s;
+                //bottom: 0;
+                -webkit-app-region: no-drag;
+    
+                .scroll-horizon-body {
+                    transition: background-color .2s;
+                    background: transparent;
+                    height: 100%;
+                    pointer-events: none;
+                    width: 100%;
+                    border: none;
+                    padding: 0;
+                    position: relative;
+    
+                    div {
+                        background: hsla(0,0%,100%,.3);
+                        max-width: none;
+                        min-width: 30px;
+                        opacity: 0;
+    
+                        &::before {
+                            bottom: -2px;
+                            top: -6px;
+                            content: "";
+                            display: block;
+                            left: 0;
+                            position: absolute;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .list_song {
+            z-index: 1;
+            position: relative;
+            max-height: calc(100vh - 150px);
+            overflow-y: scroll;
+            margin-bottom: 40px;
+
+            @media (max-width: 600px) {
+                padding: 0;
+            }
+        }
+
+        .container_body-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 24px;
+
+            .body_content-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                
+
+                .body_content-head {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: var(--white, #000000);
+                    line-height: 2;
+                }
+
+                .body_content-element {
+                    color: hsla(0,0%,100%,.7);
+                    font-size: 18px;
+                    font-weight: 500;
+                    
+                }
+            }
+        }
+
+        .canonical-pool-top {
+            margin-bottom: 40px;
+
+        }
+    }
+
+@media (max-width: 600px) {
+    .container_body {
+            .btn-effect {
+                height: 68px;
+                .btn-effect-container {
+                    .btn-effect_padding {
+                        padding: 0 0 12px 0;
+                        align-items: flex-end;
+
+                        button {
+                            margin-right: 16px;
+
+                            svg {
+                                top: 16px;
+                                left: 16px;
+                                width: 24px;
+                                height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    

@@ -1,0 +1,222 @@
+.wrapper {
+    background-color: var(--menu-bg);
+    border-radius: 6px;
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+    min-width: 196px;
+    overflow: overlay;
+    z-index: 101;
+    position: absolute;
+    right: 0;
+
+    .title_song {
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px solid var(--text-primary);
+
+        .img_song {
+            height: 40px;
+            width: 40px;
+
+            img {
+                border-radius: 4px;
+            }
+        }
+        .info_song {
+            margin-left: 5px;
+            display: flex; 
+            justify-content: center;
+            flex-direction: column;
+
+            .name_song {
+                color: var(--white);
+                font-weight: 500;
+                font-size: 14px;
+            }
+            .title_extra {
+                display: flex;
+                gap: 5px;
+                .icon_heart,
+                .icon_view {
+                    font-size: 12px;
+                    color: var(--text-secondary);
+        }
+            }
+        }
+    }
+}
+.off {
+    display: none;
+    }
+.on {
+    display: block;
+}
+
+.items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    &:hover {
+        background-color: hsla(0,0%,100%,.1);
+        border-radius: 2px;
+    }
+
+    &.logout {
+        border-top: 1px solid hsla(0,0%,100%,.1);
+    }
+
+    button {
+        padding: 12px;
+        gap: 8px;
+        justify-content: space-between;
+    }
+}
+.icon {
+    color: var(--white);
+}
+.item_title {
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.device {
+    height: 485px;
+    width: 320px;
+    inset: auto auto 0px 0px;
+    transform: translate3d(-157px, -43.6px, 0px);
+
+    .device-wrap {
+        position: relative;
+        padding: 32px 16px 1px 16px;
+        position: relative;
+        width: 320px;
+        height: 100%;
+        border-radius: 8px;
+        color: #fff;
+        cursor: context-menu;
+        
+        .device-container {
+            padding: 0 16px;
+            box-sizing: border-box;
+
+            .device-header {
+                margin-bottom: 16px;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+                .device-icon {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 10px;
+                    color: #1ed760;
+                }
+
+                .device-header_container {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    min-width: 0;
+
+                    .header-item {
+                        overflow: hidden;
+                        padding: 0 6px;
+                        white-space: nowrap;
+                        width: fit-content;   
+
+                        h3 {
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+
+                        p {
+                            font-size: 17px;
+                            color: #1ed760;;
+                        }
+                    }
+                }
+            }
+
+            .device-no-found {
+                display: flex;
+                flex-direction: column;
+                .no-found-head {
+                    margin-top: 4px;
+                    font-size: 18px;
+                    font-weight: 500;
+
+                }
+                .not-found-container {
+                    padding-top: 16px;
+                    .not-found-item {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        margin-bottom: 24px;
+
+                        .notFound-icon {
+                            font-size: 22px;
+                            margin-left: 4px;
+                            margin-right: 20px;
+                        }
+
+                        .device-noFound_container {
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: column;
+
+                            .device-noFound-item {
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: var(--white);
+                                vertical-align: baseline;
+                            }
+
+                            .device-noFound-desc {
+                                padding-top: 4px;
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: var(--text-primary);
+                            }
+                        }
+                    }
+
+                }
+
+                button {
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        
+        }
+    }
+
+    .device-before {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            z-index: -1;
+            visibility: hidden;
+            background-color: #fff;
+            left: 0px;
+            transform: translate3d(165px, 0px, 0px);
+            bottom: 0;
+            
+            &::before {
+                content: "";
+                transform: rotate(45deg);
+                background-color: #fff;
+                visibility: visible;
+                height: 16px;
+                position: absolute;
+                width: 16px;
+            }
+}
+
+

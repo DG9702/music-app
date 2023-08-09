@@ -1,0 +1,110 @@
+.wrapper {
+    margin-bottom: 16px;
+
+    .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+        line-height: normal;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+
+        .section-title-head,
+        a {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .section-title-head {
+            display: block;
+            font-size: 28px;
+            line-height: 30px;
+            color: var(--white);
+            text-overflow: ellipsis;
+        }
+        a {
+            margin-left: 8px;
+
+            .show-all {
+                font-size: 18px;
+                color: #b3b3b3;
+                display: flex;
+                gap: 8px;
+            }
+        }
+    }
+
+    .section_container {
+        --column-count: 5;
+        display: grid;
+        grid-template-columns: repeat(var(--column-count),minmax(0,1fr));
+        grid-gap: 32px;
+        min-width: 372px;
+        grid-auto-rows: 0;
+        grid-template-rows: 1fr;
+        overflow-y: hidden;
+
+        @media (max-width: 1199px) {
+            --column-count: 4;
+        }
+        
+    }
+}
+
+@media (max-width: 1199px) {
+    .wrapper {
+        &.profile {
+            .section_container {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+        .section-title {
+            margin-bottom: 8px;
+            .section-title-head {
+                font-size: 20px;
+            }
+            a {
+                .show-all {
+                    font-size: 16px;
+                }
+            }
+        }
+        .section_container {
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+            flex-wrap: nowrap;
+            position: relative;
+            align-items: stretch;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        &.profile {
+            padding: 0 12px;
+        }
+        .section-title {
+            .section-title-head {
+                font-size: 18px;
+            }
+            a {
+                .show-all {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
